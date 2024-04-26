@@ -7,23 +7,47 @@
 
 import UIKit
 
-class OfferteViewController: UIViewController {
+class OfferteViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    
 
+    @IBOutlet weak var offerteCollectionView: UICollectionView!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        offerteCollectionView.delegate = self
+        offerteCollectionView.dataSource = self
+        
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return arrayOfferte.count
     }
-    */
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        guard let cell = offerteCollectionView.dequeueReusableCell(withReuseIdentifier: "offerteCell", for: indexPath) as? OfferteCollectionViewCell else { return UICollectionViewCell() }
+        
+        cell.configCell(data: arrayOfferte[indexPath.row])
+        
+        return cell
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        guard let qrVC = storyboard?.instantiateViewController(withIdentifier: "qrView") as? QRViewController else { return }
+        
+        qrVC.selectedOfferta = arrayOfferte[indexPath.row]
+        
+        navigationController?.pushViewController(qrVC, animated: true)
+        
+   
+    }
+    
 
 }

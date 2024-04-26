@@ -8,22 +8,40 @@
 import UIKit
 
 class QRViewController: UIViewController {
-
+    
+    
+    
+    var selectedOfferta:OfferteCell?
+    
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var tempoNumLbl: UILabel!
+    @IBOutlet weak var tempoResiduoLbl: UILabel!
+    @IBOutlet weak var utilizzaBtnOut: UIButton!
+    @IBOutlet weak var QRImageView: UIImageView!
+    @IBOutlet weak var descriptionLbl: UILabel!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        updateUI()
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func updateUI(){
+        utilizzaBtnOut.layer.cornerRadius = 15
+        imageView.image = selectedOfferta?.img
+        descriptionLbl.text = selectedOfferta?.description
+        tempoNumLbl.isHidden = true
+        tempoResiduoLbl.isHidden = true
+        
     }
-    */
+    
+    @IBAction func utilizzaBtnAction(_ sender: UIButton) {
+        
+        
+    }
+    
 
 }

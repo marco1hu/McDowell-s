@@ -1,1 +1,1 @@
-This is a Swift project for a parody app inspired by the McDonald's franchise. It's a work in progress, but the aim is to create a fun and humorous experience that reimagines the fast-food giant in a playful way.
+This Swift project is a work-in-progress parody app inspired by the iconic McDowells restaurant from the cult film "Coming to America" starring Eddie Murphy. I aim to capture the film's quirky and eccentric atmosphere through a fun and interactive mobile experience.

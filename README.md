@@ -1,0 +1,1 @@
+This is a Swift project for a parody app inspired by the McDonald's franchise. It's a work in progress, but the aim is to create a fun and humorous experience that reimagines the fast-food giant in a playful way.

@@ -18,6 +18,7 @@ class HomeTableViewCell: UITableViewCell {
         // Initialization code
         imgView.contentMode = .scaleAspectFill
         
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -37,5 +38,8 @@ class HomeTableViewCell: UITableViewCell {
         underView.layer.shadowOpacity = 0.5
         underView.layer.shadowRadius = 3
     }
+    
+    
+    
 
 }

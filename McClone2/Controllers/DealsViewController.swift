@@ -30,7 +30,7 @@ class DealsViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        guard let cell = offerteCollectionView.dequeueReusableCell(withReuseIdentifier: "offerteCell", for: indexPath) as? OfferteCollectionViewCell else { return UICollectionViewCell() }
+        guard let cell = offerteCollectionView.dequeueReusableCell(withReuseIdentifier: "offerteCell", for: indexPath) as? DealsCollectionViewCell else { return UICollectionViewCell() }
         
         cell.configCell(data: arrayOfferte[indexPath.row])
         

@@ -17,7 +17,9 @@ class HomeTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         imgView.contentMode = .scaleAspectFill
-        
+        homeLbl.font = UIFont.boldSystemFont(ofSize: 22)
+        homeLbl.adjustsFontSizeToFitWidth = true
+
         
     }
 

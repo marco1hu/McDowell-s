@@ -8,6 +8,8 @@
 import UIKit
 
 class ProductsViewController: UIViewController {
+    
+    var products:[Product]?
 
     override func viewDidLoad() {
         super.viewDidLoad()

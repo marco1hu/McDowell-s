@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class HomeTableViewController: UITableViewController {
 
@@ -32,7 +33,7 @@ class HomeTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0{
-            return 250
+            return 230
         }else if indexPath.section == 1{
             return 180
         }else{
@@ -61,10 +62,32 @@ class HomeTableViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
         if indexPath.section == 0 && indexPath.row == 0{
             print("APP VENTURE")
+            if let url = URL(string: "https://mcdowells.mortenjonassen.dk/"){
+                
+                let safariVC = SFSafariViewController(url: url)
+                present(safariVC, animated: true)
+            }
         }else if indexPath.section == 1 && indexPath.row == 0{
             print("Cerca e Divertiti!")
         }else if indexPath.section == 2{
-            print("CELL")
+            switch indexPath.row{
+            case 0:
+                print("DEALS")
+                tabBarController?.selectedIndex = 1
+            case 1:
+                print("CART")
+                performSegue(withIdentifier: "toOrderInApp", sender: self)
+            default:
+                print("CELL")
+            }
+            
+            
+            
+            
+            if indexPath.row == 0{
+                
+            }
+            
         }
         
         

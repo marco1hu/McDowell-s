@@ -15,9 +15,10 @@ struct ProductCategory{
 }
 
 struct Product{
-    let description: String
-    let price: Float
-    let priceMenu: Float
+    let description:String
+    let price:Float
+    let priceMenu:Float
+    let image:UIImage
 }
 
 

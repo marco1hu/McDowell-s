@@ -26,7 +26,10 @@
 		385879032BD53202006C32B5 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 385879022BD53202006C32B5 /* Base */; };
 		385879052BD53203006C32B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 385879042BD53203006C32B5 /* Assets.xcassets */; };
 		385879082BD53203006C32B5 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 385879072BD53203006C32B5 /* Base */; };
+		38CE30332BE6337300821A58 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CE30322BE6337300821A58 /* SigninViewController.swift */; };
+		38CE30352BE6338700821A58 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CE30342BE6338700821A58 /* SignupViewController.swift */; };
 		38E883FF2BE3DAE80032B22C /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E883FE2BE3DAE80032B22C /* ProductsViewController.swift */; };
+		38F82DA12BE61F8B00F2B7D8 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F82DA02BE61F8B00F2B7D8 /* FirstViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,7 +54,10 @@
 		385879042BD53203006C32B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		385879072BD53203006C32B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		385879092BD53203006C32B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38CE30322BE6337300821A58 /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
+		38CE30342BE6338700821A58 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		38E883FE2BE3DAE80032B22C /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
+		38F82DA02BE61F8B00F2B7D8 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +91,7 @@
 				38550A2D2BD6B3490034F88E /* DealsViewController.swift */,
 				381294702BE3B999001CB276 /* OrderInAppViewController.swift */,
 				38E883FE2BE3DAE80032B22C /* ProductsViewController.swift */,
+				38CE30312BE6335200821A58 /* Login */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -126,6 +133,16 @@
 				385879092BD53203006C32B5 /* Info.plist */,
 			);
 			path = McClone2;
+			sourceTree = "<group>";
+		};
+		38CE30312BE6335200821A58 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				38F82DA02BE61F8B00F2B7D8 /* FirstViewController.swift */,
+				38CE30322BE6337300821A58 /* SigninViewController.swift */,
+				38CE30342BE6338700821A58 /* SignupViewController.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		38E883FA2BE3D2850032B22C /* Home */ = {
@@ -238,6 +255,7 @@
 			files = (
 				38550A262BD5A8C10034F88E /* AltroTableViewCell.swift in Sources */,
 				38E883FF2BE3DAE80032B22C /* ProductsViewController.swift in Sources */,
+				38CE30352BE6338700821A58 /* SignupViewController.swift in Sources */,
 				381294752BE3C437001CB276 /* CategoriesTableViewCell.swift in Sources */,
 				38550A202BD5829B0034F88E /* HomeTableViewController.swift in Sources */,
 				38550A2C2BD6B3180034F88E /* DealsCollectionViewCell.swift in Sources */,
@@ -245,6 +263,8 @@
 				3812946F2BE3B323001CB276 /* ProductStruct.swift in Sources */,
 				385878FC2BD53202006C32B5 /* AppDelegate.swift in Sources */,
 				38388F532BD5454B00265183 /* HomeTableViewCell.swift in Sources */,
+				38F82DA12BE61F8B00F2B7D8 /* FirstViewController.swift in Sources */,
+				38CE30332BE6337300821A58 /* SigninViewController.swift in Sources */,
 				38388F512BD5430500265183 /* homeCellStruct.swift in Sources */,
 				38550A282BD5C20B0034F88E /* offerteCellStruct.swift in Sources */,
 				385878FE2BD53202006C32B5 /* SceneDelegate.swift in Sources */,

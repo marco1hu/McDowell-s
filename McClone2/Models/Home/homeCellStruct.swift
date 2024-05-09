@@ -15,7 +15,7 @@ struct homeData{
 }
 
 var arrayHome:[homeData] = [
-    .init(title: "Enjoy our Offers", img: #imageLiteral(resourceName: "McDowellsBigMick")),
+    .init(title: "Enjoy our Offers", img: #imageLiteral(resourceName: "bigmick1")),
     .init(title: "Order and Pay In-App", img: #imageLiteral(resourceName: "ordina_app.jpg")),
     .init(title: "McDelivery: place an Order!", img: #imageLiteral(resourceName: "delivery.jpeg")),
     .init(title: "Spoil them with a gift card", img: #imageLiteral(resourceName: "giftcard.png")),

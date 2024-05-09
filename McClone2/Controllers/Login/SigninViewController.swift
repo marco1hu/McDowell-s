@@ -9,21 +9,38 @@ import UIKit
 
 class SigninViewController: UIViewController {
 
+    @IBOutlet weak var emailTxtField: UITextField!
+    @IBOutlet weak var passwordTxtField: UITextField!
+    @IBOutlet weak var forgotPassBtn: UIButton!
+    @IBOutlet weak var signInBtn: UIButton!
+    @IBOutlet weak var signUpBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateUI()
+        
 
-        // Do any additional setup after loading the view.
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func updateUI(){
+        signInBtn.layer.cornerRadius = 10
+        
+       
     }
-    */
-
+    
+    @IBAction func forgotPassAction(_ sender: UIButton) {
+    }
+    
+    @IBAction func signInAction(_ sender: UIButton) {
+        performSegue(withIdentifier: "toTab", sender: self)
+    }
+    
+    @IBAction func backAction(_ sender: UIButton) {
+        dismiss(animated: true)
+    }
+    
+    @IBAction func signUpAction(_ sender: UIButton) {
+        performSegue(withIdentifier: "toSignUp", sender: self)
+    }
 }

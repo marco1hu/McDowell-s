@@ -15,11 +15,14 @@ class FirstViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateUI()
+    }
+    
+    func updateUI(){
         signInBtn.layer.cornerRadius = 10
         signUpBtn.layer.cornerRadius = 10
         signUpBtn.layer.borderColor = #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1)
         signUpBtn.layer.borderWidth = 1
-
     }
     
     @IBAction func signInAction(_ sender: UIButton) {

@@ -412,7 +412,7 @@
                                             <constraint firstAttribute="height" constant="40" id="Uml-5P-wlr"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" textContentType="username"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3GO-tq-gbj">
                                         <rect key="frame" x="30" y="316.66666666666669" width="333" height="40"/>
@@ -420,7 +420,7 @@
                                             <constraint firstAttribute="height" constant="40" id="9CG-nH-sm6"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNS-I0-PE7">
                                         <rect key="frame" x="50" y="411.66666666666669" width="293" height="40"/>
@@ -570,7 +570,7 @@
                                             <constraint firstAttribute="height" constant="40" id="eEA-mV-Zrz"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" textContentType="name"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eaU-YX-Apw">
                                         <rect key="frame" x="30" y="316.66666666666669" width="333" height="40"/>
@@ -578,7 +578,7 @@
                                             <constraint firstAttribute="height" constant="40" id="O3s-qf-keb"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" textContentType="username"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lqg-1B-vtg">
                                         <rect key="frame" x="50" y="487.66666666666669" width="293" height="40.000000000000057"/>
@@ -612,7 +612,7 @@
                                             <constraint firstAttribute="height" constant="40" id="OIt-B6-Qp0"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gLQ-1Y-CaZ">
                                         <rect key="frame" x="309" y="441.66666666666669" width="51" height="31"/>

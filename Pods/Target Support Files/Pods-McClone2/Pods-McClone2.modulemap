@@ -1,0 +1,6 @@
+framework module Pods_McClone2 {
+  umbrella header "Pods-McClone2-umbrella.h"
+
+  export *
+  module * { export * }
+}

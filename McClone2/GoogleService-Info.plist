@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyDhiC_RyLjIq270Uz7-bh7to8AU1Ce0VQU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>560688720883</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.ex.McClone2</string>
+	<key>PROJECT_ID</key>
+	<string>mcdowell-s1db</string>
+	<key>STORAGE_BUCKET</key>
+	<string>mcdowell-s1db.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:560688720883:ios:526f1f7cba61edb7fdc086</string>
+</dict>
+</plist>

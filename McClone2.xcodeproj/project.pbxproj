@@ -13,7 +13,6 @@
 		381294752BE3C437001CB276 /* CategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381294742BE3C437001CB276 /* CategoriesTableViewCell.swift */; };
 		38388F512BD5430500265183 /* homeCellStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38388F502BD5430500265183 /* homeCellStruct.swift */; };
 		38388F532BD5454B00265183 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38388F522BD5454B00265183 /* HomeTableViewCell.swift */; };
-		3849F5662C01CBD900109C8B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3849F5652C01CBD900109C8B /* GoogleService-Info.plist */; };
 		3849F5692C01CDC200109C8B /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 3849F5682C01CDC200109C8B /* FirebaseAnalytics */; };
 		3849F56B2C01CDC200109C8B /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 3849F56A2C01CDC200109C8B /* FirebaseAnalyticsOnDeviceConversion */; };
 		3849F56D2C01CDC200109C8B /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3849F56C2C01CDC200109C8B /* FirebaseAnalyticsSwift */; };
@@ -45,6 +44,7 @@
 		3849F5A22C01D13E00109C8B /* SCLAlertView in Frameworks */ = {isa = PBXBuildFile; productRef = 3849F5A12C01D13E00109C8B /* SCLAlertView */; };
 		3849F5A52C01D18300109C8B /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = 3849F5A42C01D18300109C8B /* NVActivityIndicatorView */; };
 		3849F5A72C01D18300109C8B /* NVActivityIndicatorViewExtended in Frameworks */ = {isa = PBXBuildFile; productRef = 3849F5A62C01D18300109C8B /* NVActivityIndicatorViewExtended */; };
+		3849F5A92C02907900109C8B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3849F5A82C02907900109C8B /* GoogleService-Info.plist */; };
 		38550A202BD5829B0034F88E /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38550A1F2BD5829B0034F88E /* HomeTableViewController.swift */; };
 		38550A222BD5A7870034F88E /* altroCellStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38550A212BD5A7870034F88E /* altroCellStruct.swift */; };
 		38550A242BD5A8AB0034F88E /* AltroTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38550A232BD5A8AB0034F88E /* AltroTableViewController.swift */; };
@@ -72,7 +72,7 @@
 		381294742BE3C437001CB276 /* CategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewCell.swift; sourceTree = "<group>"; };
 		38388F502BD5430500265183 /* homeCellStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeCellStruct.swift; sourceTree = "<group>"; };
 		38388F522BD5454B00265183 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
-		3849F5652C01CBD900109C8B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3849F5A82C02907900109C8B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		38550A1F2BD5829B0034F88E /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		38550A212BD5A7870034F88E /* altroCellStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = altroCellStruct.swift; sourceTree = "<group>"; };
 		38550A232BD5A8AB0034F88E /* AltroTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AltroTableViewController.swift; sourceTree = "<group>"; };
@@ -202,7 +202,7 @@
 				3845358F2BD5406D002997A1 /* Controllers */,
 				385879042BD53203006C32B5 /* Assets.xcassets */,
 				385879092BD53203006C32B5 /* Info.plist */,
-				3849F5652C01CBD900109C8B /* GoogleService-Info.plist */,
+				3849F5A82C02907900109C8B /* GoogleService-Info.plist */,
 			);
 			path = McClone2;
 			sourceTree = "<group>";
@@ -369,7 +369,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				385879052BD53203006C32B5 /* Assets.xcassets in Resources */,
-				3849F5662C01CBD900109C8B /* GoogleService-Info.plist in Resources */,
+				3849F5A92C02907900109C8B /* GoogleService-Info.plist in Resources */,
 				385879082BD53203006C32B5 /* Base in Resources */,
 				385879032BD53202006C32B5 /* Base in Resources */,
 			);

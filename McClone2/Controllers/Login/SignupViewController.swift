@@ -60,6 +60,9 @@ class SignupViewController: UIViewController {
                         let alertView = SCLAlertView()
                         
                         alertView.addButton("Continua") {
+
+                            
+                            
                             let reference = Database.database().reference(fromURL: "https://mcdowell-s1db-default-rtdb.europe-west1.firebasedatabase.app")
 
                             reference.child("users").child(Auth.auth().currentUser!.uid).setValue(["Full_name": self.fullNameTxtField.text, "Email": self.emailTxtField.text, "ID": Auth.auth().currentUser?.uid])

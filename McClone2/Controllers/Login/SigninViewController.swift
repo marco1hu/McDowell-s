@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import SCLAlertView
 
 class SigninViewController: UIViewController {
 
@@ -25,6 +27,7 @@ class SigninViewController: UIViewController {
     
     func updateUI(){
         signInBtn.layer.cornerRadius = 10
+        self.navigationItem.setHidesBackButton(true, animated: true)
         
        
     }
@@ -33,11 +36,24 @@ class SigninViewController: UIViewController {
     }
     
     @IBAction func signInAction(_ sender: UIButton) {
-        performSegue(withIdentifier: "toTab", sender: self)
+        
+        
+        if emailTxtField.text == "" || passwordTxtField.text == ""{
+            SCLAlertView().showError("Error", subTitle: "Some field empty")
+        }else{
+            Auth.auth().signIn(withEmail: emailTxtField.text!, password: passwordTxtField.text!) { authResult, error in
+                if error != nil{
+                    SCLAlertView().showError("Error", subTitle: "\(String(describing: error?.localizedDescription))")
+                }else{
+                    self.performSegue(withIdentifier: "toTab", sender: self)
+                }
+            }
+        }
     }
     
     @IBAction func backAction(_ sender: UIButton) {
-        dismiss(animated: true)
+        performSegue(withIdentifier: "back", sender: self)
+        
     }
     
     @IBAction func signUpAction(_ sender: UIButton) {

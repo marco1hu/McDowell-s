@@ -20,9 +20,9 @@
 		61A232EF8E219AA49D62C7AD241CF35B /* Pods-McClone2-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-McClone2-umbrella.h"; sourceTree = "<group>"; };
 		630DCAB436331A5DB4460C87E62C469B /* Pods-McClone2-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-McClone2-dummy.m"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B5D8DD9B40E1FCDA8A97DA2166806A8E /* Pods-McClone2-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-McClone2-acknowledgements.markdown"; sourceTree = "<group>"; };
-		DD8F676EE43CF0C139C9CFE4F504140E /* Pods-McClone2 */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-McClone2"; path = Pods_McClone2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD8F676EE43CF0C139C9CFE4F504140E /* Pods_McClone2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_McClone2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD6B05BF1268E8E435369DBCF3D4AE56 /* Pods-McClone2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-McClone2.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -41,7 +41,7 @@
 		1D2A79826FE0725DBFD0B5E5074CA5CF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DD8F676EE43CF0C139C9CFE4F504140E /* Pods-McClone2 */,
+				DD8F676EE43CF0C139C9CFE4F504140E /* Pods_McClone2.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,7 +125,7 @@
 			);
 			name = "Pods-McClone2";
 			productName = Pods_McClone2;
-			productReference = DD8F676EE43CF0C139C9CFE4F504140E /* Pods-McClone2 */;
+			productReference = DD8F676EE43CF0C139C9CFE4F504140E /* Pods_McClone2.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */

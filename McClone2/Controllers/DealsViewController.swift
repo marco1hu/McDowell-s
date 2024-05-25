@@ -6,13 +6,20 @@
 //
 
 import UIKit
+import FirebaseDatabase
+
+
+class OfferteDB: NSObject{
+    @objc var descrizione: String?
+    @objc var immagine: String?
+}
 
 class DealsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     
 
     @IBOutlet weak var offerteCollectionView: UICollectionView!
-    
+    var arrayOfferteDB = [OfferteDB] ()
     
     
     override func viewDidLoad() {
@@ -20,6 +27,21 @@ class DealsViewController: UIViewController, UICollectionViewDelegate, UICollect
         
         offerteCollectionView.delegate = self
         offerteCollectionView.dataSource = self
+        
+        
+        var reference = Database.database(url: "https://mcdowell-s1db-default-rtdb.europe-west1.firebasedatabase.app/").reference()
+        reference.child("offerte").observe(.childAdded) { snapshot in
+            if let dictionary = snapshot.value as? [String: AnyObject]{
+                let descrizione = dictionary["descrizione"] as! String
+                let immagine = dictionary["immagine"] as! String
+                
+                let elementiDaAggiungere = OfferteDB()
+                elementiDaAggiungere.descrizione = descrizione
+                elementiDaAggiungere.immagine = immagine
+                
+                self.arrayOfferteDB.append(elementiDaAggiungere)
+            }
+        }
         
     }
     

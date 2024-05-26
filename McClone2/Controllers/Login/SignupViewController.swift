@@ -57,20 +57,23 @@ class SignupViewController: UIViewController {
                     if error != nil{
                         SCLAlertView().showError("Error", subTitle: "Error creation new account: \(String(describing: error?.localizedDescription))")
                     }else{
-                        let alertView = SCLAlertView()
+                        
+                        let appearance = SCLAlertView.SCLAppearance(
+                            showCloseButton: false
+                        )
+                        
+                        let alertView = SCLAlertView(appearance: appearance)
                         
                         alertView.addButton("Continua") {
-
-                            
-                            
                             let reference = Database.database().reference(fromURL: "https://mcdowell-s1db-default-rtdb.europe-west1.firebasedatabase.app")
 
                             reference.child("users").child(Auth.auth().currentUser!.uid).setValue(["Full_name": self.fullNameTxtField.text, "Email": self.emailTxtField.text, "ID": Auth.auth().currentUser?.uid])
                             
                             self.performSegue(withIdentifier: "toSignIn", sender: self)
                         }
+                        
                         alertView.showSuccess( "Well Done!",subTitle: "\(self.fullNameTxtField.text!) created a new account")
-                        //self.performSegue(withIdentifier: "toSignIn", sender: self)
+                        
                     }
                 }
                 

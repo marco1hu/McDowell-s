@@ -45,6 +45,8 @@
 		3849F5A52C01D18300109C8B /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = 3849F5A42C01D18300109C8B /* NVActivityIndicatorView */; };
 		3849F5A72C01D18300109C8B /* NVActivityIndicatorViewExtended in Frameworks */ = {isa = PBXBuildFile; productRef = 3849F5A62C01D18300109C8B /* NVActivityIndicatorViewExtended */; };
 		3849F5A92C02907900109C8B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3849F5A82C02907900109C8B /* GoogleService-Info.plist */; };
+		3849F5AB2C0357F800109C8B /* AltroTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3849F5AA2C0357F800109C8B /* AltroTitleTableViewCell.swift */; };
+		3849F5AD2C03726C00109C8B /* LogoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3849F5AC2C03726C00109C8B /* LogoutTableViewCell.swift */; };
 		38550A202BD5829B0034F88E /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38550A1F2BD5829B0034F88E /* HomeTableViewController.swift */; };
 		38550A222BD5A7870034F88E /* altroCellStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38550A212BD5A7870034F88E /* altroCellStruct.swift */; };
 		38550A242BD5A8AB0034F88E /* AltroTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38550A232BD5A8AB0034F88E /* AltroTableViewController.swift */; };
@@ -73,6 +75,8 @@
 		38388F502BD5430500265183 /* homeCellStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeCellStruct.swift; sourceTree = "<group>"; };
 		38388F522BD5454B00265183 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		3849F5A82C02907900109C8B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3849F5AA2C0357F800109C8B /* AltroTitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AltroTitleTableViewCell.swift; sourceTree = "<group>"; };
+		3849F5AC2C03726C00109C8B /* LogoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutTableViewCell.swift; sourceTree = "<group>"; };
 		38550A1F2BD5829B0034F88E /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		38550A212BD5A7870034F88E /* altroCellStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = altroCellStruct.swift; sourceTree = "<group>"; };
 		38550A232BD5A8AB0034F88E /* AltroTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AltroTableViewController.swift; sourceTree = "<group>"; };
@@ -240,6 +244,8 @@
 			children = (
 				38550A252BD5A8C10034F88E /* AltroTableViewCell.swift */,
 				38550A212BD5A7870034F88E /* altroCellStruct.swift */,
+				3849F5AA2C0357F800109C8B /* AltroTitleTableViewCell.swift */,
+				3849F5AC2C03726C00109C8B /* LogoutTableViewCell.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -411,6 +417,7 @@
 				38E883FF2BE3DAE80032B22C /* ProductsViewController.swift in Sources */,
 				38CE30352BE6338700821A58 /* SignupViewController.swift in Sources */,
 				381294752BE3C437001CB276 /* CategoriesTableViewCell.swift in Sources */,
+				3849F5AB2C0357F800109C8B /* AltroTitleTableViewCell.swift in Sources */,
 				38550A202BD5829B0034F88E /* HomeTableViewController.swift in Sources */,
 				38550A2C2BD6B3180034F88E /* DealsCollectionViewCell.swift in Sources */,
 				38550A2E2BD6B3490034F88E /* DealsViewController.swift in Sources */,
@@ -419,6 +426,7 @@
 				38388F532BD5454B00265183 /* HomeTableViewCell.swift in Sources */,
 				38F82DA12BE61F8B00F2B7D8 /* FirstViewController.swift in Sources */,
 				38CE30332BE6337300821A58 /* SigninViewController.swift in Sources */,
+				3849F5AD2C03726C00109C8B /* LogoutTableViewCell.swift in Sources */,
 				38388F512BD5430500265183 /* homeCellStruct.swift in Sources */,
 				38550A282BD5C20B0034F88E /* offerteCellStruct.swift in Sources */,
 				385878FE2BD53202006C32B5 /* SceneDelegate.swift in Sources */,

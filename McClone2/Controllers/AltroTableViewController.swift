@@ -23,15 +23,17 @@ class AltroTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 2
+        return 3
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         if section == 0{
             return 1
-        }else{
+        }else if section == 1{
             return arrayAltro.count
+        }else{
+            return 1
         }
         
     }
@@ -40,17 +42,23 @@ class AltroTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.section == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "altroTitleCell", for: indexPath)
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "altroTitleCell", for: indexPath) as? AltroTitleTableViewCell else {
+                 return UITableViewCell() }
+            cell.selectionStyle = .none
             return cell
-        }else{
+        }else if indexPath.section == 1{
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "altroCell", for: indexPath) as? AltroTableViewCell else { return UITableViewCell() }
             cell.configCell(data: arrayAltro[indexPath.row])
+            return cell
+        }else{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "logout", for: indexPath)
+            cell.selectionStyle = .none
             return cell
         }
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.section == 0{
+        if indexPath.section == 0 || indexPath.section == 2{
             return 150
         }else{
             return 65
@@ -58,8 +66,10 @@ class AltroTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        print(arrayAltro[indexPath.row].title)
+        if indexPath.section == 1{
+            tableView.deselectRow(at: indexPath, animated: true)
+            print(arrayAltro[indexPath.row].title)
+        }
     }
     /*
     // Override to support conditional editing of the table view.

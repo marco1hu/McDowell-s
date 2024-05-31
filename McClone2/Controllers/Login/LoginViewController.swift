@@ -9,7 +9,7 @@ import UIKit
 import FirebaseAuth
 import SCLAlertView
 
-class SigninViewController: UIViewController {
+class LoginViewController: UIViewController {
 
     @IBOutlet weak var emailTxtField: UITextField!
     @IBOutlet weak var passwordTxtField: UITextField!
@@ -35,17 +35,37 @@ class SigninViewController: UIViewController {
     @IBAction func forgotPassAction(_ sender: UIButton) {
     }
     
-    @IBAction func signInAction(_ sender: UIButton) {
+    @IBAction func loginAction(_ sender: UIButton) {
         
         
         if emailTxtField.text == "" || passwordTxtField.text == ""{
-            SCLAlertView().showError("Error", subTitle: "Some field empty")
+            SCLAlertView().showError("Error", subTitle: "One or more of the required fields is missing.")
         }else{
             Auth.auth().signIn(withEmail: emailTxtField.text!, password: passwordTxtField.text!) { authResult, error in
+                
+              
+                
                 if error != nil{
                     SCLAlertView().showError("Error", subTitle: "\(String(describing: error?.localizedDescription))")
                 }else{
-                    self.performSegue(withIdentifier: "toTab", sender: self)
+                    
+                    let pass = self.passwordTxtField.text!
+                    let mail = self.emailTxtField.text!
+                    
+                    let passD = pass.data(using: .utf8)
+                    let mailD = mail.data(using: .utf8)
+                    
+                    let p = KeyChainHelper.storeData(data: passD!, forService: Config.service, account: Config.accountP)
+                    let m = KeyChainHelper.storeData(data: mailD!, forService: Config.service, account: Config.accountM)
+                    
+                    if p && m {
+                        print("Dati salvatinel Keychain")
+                       
+                    }else{
+                        print("I dati non sono stati salvati")
+                    }
+                    
+                    self.performSegue(withIdentifier: "toTab", sender: nil)
                 }
             }
         }
@@ -57,6 +77,7 @@ class SigninViewController: UIViewController {
     }
     
     @IBAction func signUpAction(_ sender: UIButton) {
+        
         performSegue(withIdentifier: "toSignUp", sender: self)
     }
 }

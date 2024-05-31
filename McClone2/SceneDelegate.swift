@@ -17,6 +17,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        //altro
+        
+        guard let passD = KeyChainHelper.retrieveData(forService: Config.service, account: Config.accountP),
+              let mailD = KeyChainHelper.retrieveData(forService: Config.service, account: Config.accountM) else {
+            print("Non sono riuscito a prendere i dati dal keychain")
+            return
+        }
+        
+        let password = String(data: passD, encoding: .utf8)
+        let mail = String(data: mailD, encoding: .utf8)
+        
+        print("Retrieved password and email \(password!) \(mail!)")
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

@@ -48,7 +48,7 @@ class SignupViewController: UIViewController {
     
     @IBAction func signUpAction(_ sender: UIButton) {
         if (fullNameTxtField.text == "" || emailTxtField.text == "" || passwTxtField.text == "" || confirmPasswrdTxtField.text == ""){
-            SCLAlertView().showInfo("Errore", subTitle: "One or more of the required fields is missing.")
+            SCLAlertView().showError("Error", subTitle: "One or more of the required fields is missing.")
         }else{
             if passwTxtField.text == confirmPasswrdTxtField.text{
                 

@@ -60,7 +60,11 @@
 		385879032BD53202006C32B5 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 385879022BD53202006C32B5 /* Base */; };
 		385879052BD53203006C32B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 385879042BD53203006C32B5 /* Assets.xcassets */; };
 		385879082BD53203006C32B5 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 385879072BD53203006C32B5 /* Base */; };
-		38CE30332BE6337300821A58 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CE30322BE6337300821A58 /* SigninViewController.swift */; };
+		3878986A2C09F54800CF06AB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 387898692C09F54700CF06AB /* Security.framework */; };
+		3878986D2C09F7B400CF06AB /* KeyChainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3878986C2C09F7B400CF06AB /* KeyChainHelper.swift */; };
+		387898702C09F7E700CF06AB /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3878986F2C09F7E700CF06AB /* IQKeyboardManagerSwift */; };
+		387898722C09FECE00CF06AB /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387898712C09FECE00CF06AB /* Config.swift */; };
+		38CE30332BE6337300821A58 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CE30322BE6337300821A58 /* LoginViewController.swift */; };
 		38CE30352BE6338700821A58 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CE30342BE6338700821A58 /* SignupViewController.swift */; };
 		38E883FF2BE3DAE80032B22C /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E883FE2BE3DAE80032B22C /* ProductsViewController.swift */; };
 		38F82DA12BE61F8B00F2B7D8 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F82DA02BE61F8B00F2B7D8 /* FirstViewController.swift */; };
@@ -92,7 +96,10 @@
 		385879042BD53203006C32B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		385879072BD53203006C32B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		385879092BD53203006C32B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		38CE30322BE6337300821A58 /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
+		387898692C09F54700CF06AB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		3878986C2C09F7B400CF06AB /* KeyChainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainHelper.swift; sourceTree = "<group>"; };
+		387898712C09FECE00CF06AB /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		38CE30322BE6337300821A58 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		38CE30342BE6338700821A58 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		38E883FE2BE3DAE80032B22C /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
 		38F82DA02BE61F8B00F2B7D8 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3878986A2C09F54800CF06AB /* Security.framework in Frameworks */,
 				3849F5872C01CDC200109C8B /* FirebaseFunctions in Frameworks */,
 				3849F57D2C01CDC200109C8B /* FirebaseDatabaseSwift in Frameworks */,
 				3849F59F2C01CDC200109C8B /* FirebaseVertexAI-Preview in Frameworks */,
@@ -126,6 +134,7 @@
 				3849F58B2C01CDC200109C8B /* FirebaseInAppMessaging-Beta in Frameworks */,
 				3849F5892C01CDC200109C8B /* FirebaseFunctionsCombine-Community in Frameworks */,
 				3849F5792C01CDC200109C8B /* FirebaseCrashlytics in Frameworks */,
+				387898702C09F7E700CF06AB /* IQKeyboardManagerSwift in Frameworks */,
 				3849F58F2C01CDC200109C8B /* FirebaseInstallations in Frameworks */,
 				3849F5972C01CDC200109C8B /* FirebaseRemoteConfig in Frameworks */,
 				3849F5A52C01D18300109C8B /* NVActivityIndicatorView in Frameworks */,
@@ -201,6 +210,7 @@
 			children = (
 				385878FB2BD53202006C32B5 /* AppDelegate.swift */,
 				385878FD2BD53202006C32B5 /* SceneDelegate.swift */,
+				3878986B2C09F79F00CF06AB /* Utils */,
 				384535902BD5407D002997A1 /* View */,
 				38388F4F2BD542DF00265183 /* Models */,
 				3845358F2BD5406D002997A1 /* Controllers */,
@@ -211,11 +221,20 @@
 			path = McClone2;
 			sourceTree = "<group>";
 		};
+		3878986B2C09F79F00CF06AB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3878986C2C09F7B400CF06AB /* KeyChainHelper.swift */,
+				387898712C09FECE00CF06AB /* Config.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		38CE30312BE6335200821A58 /* Login */ = {
 			isa = PBXGroup;
 			children = (
 				38F82DA02BE61F8B00F2B7D8 /* FirstViewController.swift */,
-				38CE30322BE6337300821A58 /* SigninViewController.swift */,
+				38CE30322BE6337300821A58 /* LoginViewController.swift */,
 				38CE30342BE6338700821A58 /* SignupViewController.swift */,
 			);
 			path = Login;
@@ -263,6 +282,7 @@
 		B86AD6766F3A3C289E81BF3B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				387898692C09F54700CF06AB /* Security.framework */,
 				F5A77E931F7BAFC6E5F6FB76 /* Pods_McClone2.framework */,
 			);
 			name = Frameworks;
@@ -326,6 +346,7 @@
 				3849F5A12C01D13E00109C8B /* SCLAlertView */,
 				3849F5A42C01D18300109C8B /* NVActivityIndicatorView */,
 				3849F5A62C01D18300109C8B /* NVActivityIndicatorViewExtended */,
+				3878986F2C09F7E700CF06AB /* IQKeyboardManagerSwift */,
 			);
 			productName = McClone2;
 			productReference = 385878F82BD53202006C32B5 /* McClone2.app */;
@@ -359,6 +380,7 @@
 				3849F5672C01CDC200109C8B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				3849F5A02C01D13E00109C8B /* XCRemoteSwiftPackageReference "SCLAlertView-Swift" */,
 				3849F5A32C01D18300109C8B /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */,
+				3878986E2C09F7E700CF06AB /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = 385878F92BD53202006C32B5 /* Products */;
 			projectDirPath = "";
@@ -418,6 +440,7 @@
 				38CE30352BE6338700821A58 /* SignupViewController.swift in Sources */,
 				381294752BE3C437001CB276 /* CategoriesTableViewCell.swift in Sources */,
 				3849F5AB2C0357F800109C8B /* AltroTitleTableViewCell.swift in Sources */,
+				387898722C09FECE00CF06AB /* Config.swift in Sources */,
 				38550A202BD5829B0034F88E /* HomeTableViewController.swift in Sources */,
 				38550A2C2BD6B3180034F88E /* DealsCollectionViewCell.swift in Sources */,
 				38550A2E2BD6B3490034F88E /* DealsViewController.swift in Sources */,
@@ -425,7 +448,8 @@
 				385878FC2BD53202006C32B5 /* AppDelegate.swift in Sources */,
 				38388F532BD5454B00265183 /* HomeTableViewCell.swift in Sources */,
 				38F82DA12BE61F8B00F2B7D8 /* FirstViewController.swift in Sources */,
-				38CE30332BE6337300821A58 /* SigninViewController.swift in Sources */,
+				3878986D2C09F7B400CF06AB /* KeyChainHelper.swift in Sources */,
+				38CE30332BE6337300821A58 /* LoginViewController.swift in Sources */,
 				3849F5AD2C03726C00109C8B /* LogoutTableViewCell.swift in Sources */,
 				38388F512BD5430500265183 /* homeCellStruct.swift in Sources */,
 				38550A282BD5C20B0034F88E /* offerteCellStruct.swift in Sources */,
@@ -512,7 +536,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -569,7 +593,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -604,6 +628,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ex.McClone2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -635,6 +663,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ex.McClone2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -687,6 +719,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 5.2.0;
+			};
+		};
+		3878986E2C09F7E700CF06AB /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.3;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -846,6 +886,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3849F5A32C01D18300109C8B /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
 			productName = NVActivityIndicatorViewExtended;
+		};
+		3878986F2C09F7E700CF06AB /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3878986E2C09F7E700CF06AB /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

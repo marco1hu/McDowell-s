@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import SCLAlertView
 
 class AltroTableViewController: UITableViewController {
 
@@ -28,9 +30,7 @@ class AltroTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        if section == 0{
-            return 1
-        }else if section == 1{
+        if section == 1{
             return arrayAltro.count
         }else{
             return 1
@@ -42,23 +42,29 @@ class AltroTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.section == 0 {
+            
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "altroTitleCell", for: indexPath) as? AltroTitleTableViewCell else {
                  return UITableViewCell() }
             cell.selectionStyle = .none
             return cell
+            
         }else if indexPath.section == 1{
+            
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "altroCell", for: indexPath) as? AltroTableViewCell else { return UITableViewCell() }
             cell.configCell(data: arrayAltro[indexPath.row])
             return cell
-        }else{
-            let cell = tableView.dequeueReusableCell(withIdentifier: "logout", for: indexPath)
-            cell.selectionStyle = .none
+            
+        }else if indexPath.section == 2{
+            
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "logoutCell", for: indexPath) as? LogoutTableViewCell else {
+                 return UITableViewCell() }
             return cell
         }
+        return UITableViewCell()
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.section == 0 || indexPath.section == 2{
+        if indexPath.section == 0{
             return 150
         }else{
             return 65
@@ -69,6 +75,15 @@ class AltroTableViewController: UITableViewController {
         if indexPath.section == 1{
             tableView.deselectRow(at: indexPath, animated: true)
             print(arrayAltro[indexPath.row].title)
+        }else if indexPath.section == 2{
+            let firebaseAuth = Auth.auth()
+            do{
+                try firebaseAuth.signOut()
+                self.performSegue(withIdentifier: "toFirstView", sender: self)
+                
+            }catch let errore as NSError{
+                SCLAlertView().showError("Error", subTitle: (errore as! String))
+            }
         }
     }
     /*

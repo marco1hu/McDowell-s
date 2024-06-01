@@ -7,16 +7,17 @@
 
 import UIKit
 
-class LogoutTableViewCell: UITableViewCell {
 
+class LogoutTableViewCell: UITableViewCell {
+   
+    
+    @IBOutlet weak var logoutBtn: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        
     }
     
-    
-    @IBAction func logoutBtn(_ sender: UIButton) {
-        print("LOGOUT")
-    }
     
 }

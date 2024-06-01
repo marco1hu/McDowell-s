@@ -252,8 +252,8 @@
 		38E883FB2BE3D2A90032B22C /* Deals */ = {
 			isa = PBXGroup;
 			children = (
-				38550A272BD5C20B0034F88E /* offerteCellStruct.swift */,
 				38550A2B2BD6B3180034F88E /* DealsCollectionViewCell.swift */,
+				38550A272BD5C20B0034F88E /* offerteCellStruct.swift */,
 			);
 			path = Deals;
 			sourceTree = "<group>";

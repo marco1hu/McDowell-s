@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -18,6 +19,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
         //altro
+        if Auth.auth().currentUser?.uid == nil{
+              
+              let storyboard = UIStoryboard(name: "Main", bundle: nil)
+              let initialViewController = storyboard.instantiateViewController(withIdentifier: "firstViewC")
+                window?.rootViewController = initialViewController
+                window?.makeKeyAndVisible()
+            }else{
+              let storyboard = UIStoryboard(name: "Main", bundle: nil)
+              let initialViewController = storyboard.instantiateViewController(withIdentifier: "homeViewC")
+                window?.rootViewController = initialViewController
+                window?.makeKeyAndVisible()
+            }
+        
+        
         
         guard let passD = KeyChainHelper.retrieveData(forService: Config.service, account: Config.accountP),
               let mailD = KeyChainHelper.retrieveData(forService: Config.service, account: Config.accountM) else {
